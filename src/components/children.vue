@@ -5,10 +5,11 @@
     </p>
     {{ parentMessage }}
     <button @click="counter">숫자를 증가시킵니다.</button>
+    {{ injectMessage }}
   </div>
 </template>
 <script lang="ts">
-  import { Component, Prop, Vue, Watch, Emit } from 'vue-property-decorator';
+  import { Component, Prop, Vue, Watch, Emit, Inject } from 'vue-property-decorator';
 
   @Component
   export default class Children extends Vue {
@@ -24,5 +25,7 @@
     counter () {
       console.log('count');
     }
+
+    @Inject() readonly injectMessage!: string;
   }
 </script>
