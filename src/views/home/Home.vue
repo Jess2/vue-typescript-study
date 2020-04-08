@@ -2,7 +2,10 @@
   <div class="home">
     <h1>Home</h1>
     <message></message>
-    <children :parentMessage="message"></children>
+    <children :parentMessage="message" @counter="counter"></children>
+    <p>
+      부모에서 숫자를 보여줍니다. : {{ count }}
+    </p>
     <button @click="changeMessage">메세지를 바꿔볼게요</button>
   </div>
 </template>
@@ -20,9 +23,14 @@
   })
   export default class Home extends Vue {
     message: string = 'hello world!';
+    count: number = 0;
 
     changeMessage () {
       this.message = 'changed!';
+    }
+
+    counter () {
+      this.count++;
     }
   }
 </script>
