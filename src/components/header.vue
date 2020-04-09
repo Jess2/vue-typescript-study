@@ -4,7 +4,7 @@
     <ol class="breadcrumb">
       <li><router-link to="/">All</router-link></li>
       <li><router-link to="/active">Active</router-link></li>
-      <li class="active"><router-link to="/clear">Clear</router-link></li>
+      <li><router-link to="/clear">Clear</router-link></li>
     </ol>
   </div>
 </template>
