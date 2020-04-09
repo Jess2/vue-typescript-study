@@ -1,9 +1,12 @@
 <template>
-  <ol class="breadcrumb">
-    <li><a href="#">All</a></li>
-    <li><a href="#">Active</a></li>
-    <li class="active">Clear</li>
-  </ol>
+  <div>
+    <h1>To Do</h1>
+    <ol class="breadcrumb">
+      <li><router-link to="/">All</router-link></li>
+      <li><router-link to="/active">Active</router-link></li>
+      <li class="active"><router-link to="/clear">Clear</router-link></li>
+    </ol>
+  </div>
 </template>
 <script lang="ts">
   import { Vue, Component } from 'vue-property-decorator';
